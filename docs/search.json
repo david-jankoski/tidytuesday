@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "colophon.html",
+    "href": "colophon.html",
+    "title": "Colophon",
+    "section": "",
+    "text": "Colophon\nThis project would not be possible without the tireless work of many free-software developers. Many thanks for all your work.\nR Core Team (2023). R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria. https://www.R-project.org/.\nQuarto from Posit / RStudio.\ngithub/juba’s great quarto extension bookup-html",
+    "crumbs": [
+      "Appendix",
+      "Colophon"
+    ]
+  },
+  {
+    "objectID": "tidytuesday.html",
+    "href": "tidytuesday.html",
+    "title": "David Jankoski - Tidy Tuesday",
+    "section": "",
+    "text": "This is a default template for the bookup-html custom quarto format.\nYou can learn more about bookup in its Github repository.\nYou can learn more about controlling the appearance of HTML output at the quarto website."
+  },
+  {
+    "objectID": "tidytuesday.html#introduction",
+    "href": "tidytuesday.html#introduction",
+    "title": "David Jankoski - Tidy Tuesday",
+    "section": "",
+    "text": "This is a default template for the bookup-html custom quarto format.\nYou can learn more about bookup in its Github repository.\nYou can learn more about controlling the appearance of HTML output at the quarto website."
+  },
+  {
+    "objectID": "R/2024/W11/fiscal_sponsors.html",
+    "href": "R/2024/W11/fiscal_sponsors.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "The context for this week’s Tidy Tuesday dataset is slightly sad and misfortunate as I saw the post from Jon Harmon (@johnthegeek) on Linked In announcing troubles with collecting sponsorships for the R4DS Learning Community 🙁.\nThis is a very supportive and helpful community and if you are in the position to somehow support them, then you definitely should consider it. I’ve learned a lot from their various channels on Slack, each dedicated to a specific book or topic.\nThis week’s Tidy Tuesday dataset is about Fiscal sponsors.\nSetup libraries and load data.\n\n\n\n    Downloading file 1 of 1: `fiscal_sponsor_directory.csv`\n\n\nGiven the context - I wanted to take a look at the number of projects that are related to Education or Data Science. Each sponsorship has a project_types column which holds info on the topic of the project. I’ve decided to label a project as educational - if one of it’s project types (there are several entries possible) contains either of the keywords {Education, Data, Science} (case-insensitive).\nWith this I will try to answer some questions like:\n\nwhat is the share of such projects out of the whole set ?\nare more such projects sponsored over the years ?\nare the number of criteria for such projects to get sponsorship increasing over the years ?\n\n\n\nCode\nfiscal_sponsors &lt;-\n  fiscal_sponsor_directory |&gt;\n  select(\n    name,\n    year_fiscal_sponsor,\n    n_sponsored,\n    project_types,\n    eligibility_criteria,\n    services\n  ) |&gt;\n  mutate(\n    is_project_educational = str_detect(project_types, \"[Ed]ucation|[Dd]ata|[Ss]cience\"),\n    # \"1987\" -&gt; \"19870101\" -&gt; 1987-01-01\n    year = {\n      year_fiscal_sponsor |&gt;\n        as.character() |&gt;\n        str_c(\"0101\") |&gt;\n        ymd()\n    }\n  )"
+  },
+  {
+    "objectID": "R/2024/W11/fiscal_sponsors.html#takeaways",
+    "href": "R/2024/W11/fiscal_sponsors.html#takeaways",
+    "title": "Introduction",
+    "section": "Takeaways",
+    "text": "Takeaways\n\nthere are some strange quirks in the data which i am not sure how to interpet\n\nthere are missing values - seen by the breaks in the lines on the plot\nsuccessive years seem to be very “jumpy”, not sure if this is realistic ?\n\nthe general trend is that indeed such projects are increasingly more sponsored over the years\nthere was a first in peak in sponsoring such projects around 1975, with more recent years 2013 reaching back to those record levels"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Introduction\nHello and welcome to my site where I collect mostly my Tidy Tuesday entries.\nYou can find all the source code here. If you have any questions or just want to drop me a message to say hi, you can do so here.\n\n\nTidyTuesday\n\n2024 Week 11",
+    "crumbs": [
+      "Contents",
+      "Introduction"
+    ]
+  }
+]

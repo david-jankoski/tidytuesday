@@ -1,0 +1,44 @@
+project:
+  type: website
+  output-dir: docs
+
+format:
+  bookup-html+dark:
+    grid:
+      body-width: 1300px
+      margin-width: 130px
+      gutter-width: 1.5rem
+    embed-fonts: true
+    toc: true
+    toc-depth: 2
+    toc-expand: 2
+    number-sections: false
+    sidebar:
+      style: "docked"
+    monofont: Fira Code Light
+    nav-buttons: [github]
+    github: https://github.com/david-jankoski/tidytuesday
+
+website:
+  title: "David Jankoski - Tidy Tuesday"
+  search: true
+  reader-mode: true
+  navbar:
+    background: "#2e3f58"
+  sidebar:
+    style: "floating"
+    contents:
+      - section: "Contents"
+        contents:
+          - index.qmd
+      - section: "Appendix"
+        contents:
+          - colophon.qmd
+
+echo: true
+code-fold: true
+monofont: Fira Code
+editor: visual
+execute:
+  warning: false
+  message: false

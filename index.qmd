@@ -1,0 +1,20 @@
+---
+number-sections: false
+echo: false
+code-fold: true
+monofont: Fira Code Light
+execute:
+  warning: false
+  code-fold: true
+---
+
+# Introduction
+
+Hello and welcome to my site where I collect mostly my Tidy Tuesday entries.
+
+You can find all the source code here.
+If you have any questions or just want to drop me a message to say hi, you can do so [here](mailto:leledavid\@e.email).
+
+# TidyTuesday
+
+-   [2024 Week 11](R/2024/W11/fiscal_sponsors.qmd#introduction)
