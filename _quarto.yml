@@ -34,6 +34,7 @@ website:
       - section: "Appendix"
         contents:
           - colophon.qmd
+          - open_source_contributions.qmd
 
 echo: true
 code-fold: true

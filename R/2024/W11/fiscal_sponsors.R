@@ -1,3 +1,5 @@
+library("fs")
+library("here")
 library("tidytuesdayR")
 library("scales")
 library("ggtext")
@@ -6,7 +8,14 @@ library("tidyverse")
 
 tuesdata <- tidytuesdayR::tt_load(2024, week = 11)
 
+
 fiscal_sponsor_directory <- tuesdata$fiscal_sponsor_directory
+
+fiscal_sponsor_directory |> arrow::write_feather(
+  path_join(c(here(), "data", "fiscal_sponsor_directory.feather")),
+  compression = "zstd",
+  compression_level = 22
+)
 
 educational_projects_sponsors <-
   fiscal_sponsor_directory |>
@@ -205,13 +214,13 @@ educational_projects_sponsors |>
   unnest_longer(col = eligibility_criteria) |>
   unnest_longer(col = project_types) |>
   count(project_types, eligibility_criteria, sort = T) |>
-  filter(
-    project_types %in% c("Education", "Arts and culture")
-  ) |>
+  # filter(
+  #   project_types %in% c("Education", "Arts and culture")
+  # ) |>
   group_by(project_types) |>
   slice_max(order_by = n, n = 10) |>
   ungroup() |>
-  as_tbl_graph(directed = T) |>
+  as_tbl_graph(directed = F) |>
   ggraph() +
   geom_node_point() +
   geom_node_label(aes(label = name)) +
@@ -221,6 +230,22 @@ educational_projects_sponsors |>
 
 
 
+
+# criteria graph ?
+educational_projects_sponsors |>
+  select(name, year_fiscal_sponsor, project_types, eligibility_criteria) |>
+  mutate(
+    across(
+      project_types:eligibility_criteria,
+      ~ str_split(.x, "\\|")
+    )
+  ) |>
+  unnest_longer(col = eligibility_criteria) |>
+  unnest_longer(col = project_types) |>
+  count(project_types, eligibility_criteria, sort = T) |>
+  filter(
+    project_types %in% c("Education", "Arts and culture")
+  ) |>
 
 
 

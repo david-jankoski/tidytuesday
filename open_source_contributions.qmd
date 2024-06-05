@@ -1,0 +1,26 @@
+---
+number-sections: false
+monofont: Fira Code Light
+---
+
+## Open Source Contributions
+
+This is a list of some of my contributions to open-source libraries or books. They are nothing spectacular but I hope they show my love and dedication to supporting and promoting this culture.
+
+### Bigger ones
+
+-   R library `gender-conscious-routing`: notice and fix a small logical mistake in code [\[1\]](https://github.com/mpadge/gender-conscious-routing/pull/13)
+-   Emacs mail client library for nicer formatting of display: notice and report typo in defined variable [\[2\]](https://github.com/Alexander-Miller/mu4e-column-faces/issues/8)
+-   Great Expectations: comment about code for new feature in PR [\[3\]](https://github.com/great-expectations/great_expectations/pull/8907#discussion_r1382344189)
+-   `python-bigquery-pandas`: clarification on how to do specific thing with library [\[4\]](https://github.com/googleapis/python-bigquery-pandas/issues/569)
+
+### Smaller ones
+
+-   Telling Stories with Data (online book): report and fix mistakes in sections \[[10](https://github.com/RohanAlexander/telling_stories/issues/91), [11](https://github.com/RohanAlexander/telling_stories/issues/92)\]
+-   R package `rvest`: fix typos in docs [\[8\]](https://github.com/tidyverse/rvest/pull/395)
+-   Airflow: fix broken link in docs [\[5\]](https://github.com/apache/airflow/pull/25642)
+-   Google Cloud: fix small things in docs [\[6\]](https://github.com/GoogleCloudPlatform/professional-services/pull/927)
+-   R package `fst`: notice and report a bug [\[7\]](https://github.com/fstpackage/fst/issues/238)
+-   R initiative on new ways to serialise data: fix main README in repo [\[9\]](https://github.com/RConsortium/marshalling-wg/pull/1)
+
+*(N.B. some are done via my work account and some others via my personal github account.)*

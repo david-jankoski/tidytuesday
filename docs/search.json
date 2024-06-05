@@ -11,18 +11,15 @@
     ]
   },
   {
-    "objectID": "tidytuesday.html",
-    "href": "tidytuesday.html",
-    "title": "David Jankoski - Tidy Tuesday",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction",
     "section": "",
-    "text": "This is a default template for the bookup-html custom quarto format.\nYou can learn more about bookup in its Github repository.\nYou can learn more about controlling the appearance of HTML output at the quarto website."
-  },
-  {
-    "objectID": "tidytuesday.html#introduction",
-    "href": "tidytuesday.html#introduction",
-    "title": "David Jankoski - Tidy Tuesday",
-    "section": "",
-    "text": "This is a default template for the bookup-html custom quarto format.\nYou can learn more about bookup in its Github repository.\nYou can learn more about controlling the appearance of HTML output at the quarto website."
+    "text": "Introduction\nHello and welcome to my site where I collect mostly my Tidy Tuesday entries.\nYou can find all the source code here. If you have any questions or just want to drop me a message to say hi, you can do so here.\n\n\nTidyTuesday\n\n2024 Week 11",
+    "crumbs": [
+      "Contents",
+      "Introduction"
+    ]
   },
   {
     "objectID": "R/2024/W11/fiscal_sponsors.html",
@@ -39,14 +36,39 @@
     "text": "Takeaways\n\nthere are some strange quirks in the data which i am not sure how to interpet\n\nthere are missing values - seen by the breaks in the lines on the plot\nsuccessive years seem to be very “jumpy”, not sure if this is realistic ?\n\nthe general trend is that indeed such projects are increasingly more sponsored over the years\nthere was a first in peak in sponsoring such projects around 1975, with more recent years 2013 reaching back to those record levels"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Introduction",
+    "objectID": "tidytuesday.html",
+    "href": "tidytuesday.html",
+    "title": "David Jankoski - Tidy Tuesday",
     "section": "",
-    "text": "Introduction\nHello and welcome to my site where I collect mostly my Tidy Tuesday entries.\nYou can find all the source code here. If you have any questions or just want to drop me a message to say hi, you can do so here.\n\n\nTidyTuesday\n\n2024 Week 11",
+    "text": "This is a default template for the bookup-html custom quarto format.\nYou can learn more about bookup in its Github repository.\nYou can learn more about controlling the appearance of HTML output at the quarto website."
+  },
+  {
+    "objectID": "tidytuesday.html#introduction",
+    "href": "tidytuesday.html#introduction",
+    "title": "David Jankoski - Tidy Tuesday",
+    "section": "",
+    "text": "This is a default template for the bookup-html custom quarto format.\nYou can learn more about bookup in its Github repository.\nYou can learn more about controlling the appearance of HTML output at the quarto website."
+  },
+  {
+    "objectID": "open_source_contributions.html",
+    "href": "open_source_contributions.html",
+    "title": "David Jankoski - Tidy Tuesday",
+    "section": "",
+    "text": "This is a list of some of my contributions to open-source libraries or books. They are nothing spectacular but I hope they show my love and dedication to supporting and promoting this culture.\n\n\n\nR library gender-conscious-routing: notice and fix a small logical mistake in code [1]\nEmacs mail client library for nicer formatting of display: notice and report typo in defined variable [2]\nGreat Expectations: comment about code for new feature in PR [3]\npython-bigquery-pandas: clarification on how to do specific thing with library [4]\n\n\n\n\n\nTelling Stories with Data (online book): report and fix mistakes in sections [10, 11]\nR package rvest: fix typos in docs [8]\nAirflow: fix broken link in docs [5]\nGoogle Cloud: fix small things in docs [6]\nR package fst: notice and report a bug [7]\nR initiative on new ways to serialise data: fix main README in repo [9]\n\n(N.B. some are done via my work account and some others via my personal github account.)",
     "crumbs": [
-      "Contents",
-      "Introduction"
+      "Appendix",
+      "Open Source Contributions"
+    ]
+  },
+  {
+    "objectID": "open_source_contributions.html#open-source-contributions",
+    "href": "open_source_contributions.html#open-source-contributions",
+    "title": "David Jankoski - Tidy Tuesday",
+    "section": "",
+    "text": "This is a list of some of my contributions to open-source libraries or books. They are nothing spectacular but I hope they show my love and dedication to supporting and promoting this culture.\n\n\n\nR library gender-conscious-routing: notice and fix a small logical mistake in code [1]\nEmacs mail client library for nicer formatting of display: notice and report typo in defined variable [2]\nGreat Expectations: comment about code for new feature in PR [3]\npython-bigquery-pandas: clarification on how to do specific thing with library [4]\n\n\n\n\n\nTelling Stories with Data (online book): report and fix mistakes in sections [10, 11]\nR package rvest: fix typos in docs [8]\nAirflow: fix broken link in docs [5]\nGoogle Cloud: fix small things in docs [6]\nR package fst: notice and report a bug [7]\nR initiative on new ways to serialise data: fix main README in repo [9]\n\n(N.B. some are done via my work account and some others via my personal github account.)",
+    "crumbs": [
+      "Appendix",
+      "Open Source Contributions"
     ]
   }
 ]

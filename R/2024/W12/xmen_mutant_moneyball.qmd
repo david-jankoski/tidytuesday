@@ -1,0 +1,50 @@
+---
+echo: false
+eval: false
+include: false
+
+code-fold: true
+monofont: Fira Code Light
+execute:
+  warning: false
+  code-fold: true
+---
+
+```{r}
+#| label: setup
+#| echo: false
+
+library("tidytuesdayR")
+library("scales")
+library("ggtext")
+library("nationalparkcolors")
+library("tidyverse")
+
+tuesdata <- tidytuesdayR::tt_load(2024, week = 12)
+```
+
+```{r}
+mutant_moneyball <- tuesdata$mutant_moneyball
+mutant_moneyball
+```
+
+```{r}
+#| label: remove-me-1
+
+tuesdata$mutant_moneyball |> arrow::write_feather(
+  path_join(c(here(), "data", "mutant_moneyball.feather")),
+  compression = "zstd",
+  compression_level = 22
+)
+```
+
+```{r}
+library("httr2")
+
+xmen_api <- "https://xmenapiheroku.herokuapp.com/api/characters"
+
+req <- request(xmen_api)
+
+resp <- req_perform(req, verbosity = 3)
+```
+
